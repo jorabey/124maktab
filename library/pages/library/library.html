@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kutubxona | Boshqaruv Paneli | 124-Maktab</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../assets/vendors/font-awesome/css/font-awesome.min.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../assets/vendors/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/extra.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../../assets/images/logo.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:../../partials/_navbar.html -->
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+          <a class="navbar-brand brand-logo" href="../../index.html"><i class="fa fa-university me-2 text-success"></i>124-Maktab</a>
+          <a class="navbar-brand brand-logo-mini" href="../../index.html"><i class="fa fa-university me-2 text-success"></i></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="nav-profile-img">
+                  <img id="userImg1" src="../../assets/images/jpg/user-icon.jpg" alt="image">
+                  <span id="onlineStatus1" class="availability-status online"></span>
+                </div>
+                <div class="nav-profile-text">
+                  <p id="userFullName1" class="mb-1 text-black">Ism Fammilya</p>
+                </div>
+              </a>
+              <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                <button id="refreshBtn" class="dropdown-item" href="rax.html">
+                  <i class="mdi mdi-cached me-2 text-success"></i> Yangilash </button>
+                <div class="dropdown-divider"></div>
+                <button onclick="logOut()" class="dropdown-item">
+                  <i class="mdi mdi-logout me-2 text-primary"></i> Tizimdan Chiqish </button>
+              </div>
+            </li>
+            <li class="nav-item d-none d-lg-block full-screen-link">
+              <a class="nav-link">
+                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="mdi mdi-email-outline"></i>
+                <span id="messagesAlert" class="count-symbol"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                <h6 class="p-3 mb-0">Xabarlar</h6>
+                <div class="dropdown-divider"></div>
+                <div id="messagesBox" >
+
+                </div>
+                <div class="dropdown-divider"></div>
+                <h6 id="messagesCount" class="p-3 mb-0 text-center">yangi xabar</h6>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+                <i class="mdi mdi-bell-outline"></i>
+                <span class="count-symbol bg-danger"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                <h6 class="p-3 mb-0">Bildirishnomalar</h6>
+                <div class="dropdown-divider"></div>
+                 <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-danger">
+                      <i class="fa fa-times"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Xatolik</h6>
+                    <p class="text-gray ellipsis mb-0"> Horircha Bu Xizmat Ishlamaydi </p>
+                  </div>
+                </a>
+                <!--<a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-success">
+                      <i class="mdi mdi-calendar"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Bugun</h6>
+                    <p class="text-gray ellipsis mb-0"> Nimadir boldi </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-warning">
+                      <i class="mdi mdi-cog"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Sozlamlar</h6>
+                    <p class="text-gray ellipsis mb-0"> Dashboard Yangilandi </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-info">
+                      <i class="mdi mdi-link-variant"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject font-weight-normal mb-1">Admin</h6>
+                    <p class="text-gray ellipsis mb-0"> Yangi Admin qo'shildi! </p>
+                  </div>
+                </a>-->
+                <div class="dropdown-divider"></div>
+                <h6 class="p-3 mb-0 text-center">Barcha Bildirishnomalar</h6>
+              </div>
+            </li>
+            <li class="nav-item nav-logout d-none d-lg-block">
+              <a class="nav-link" href="library.html">
+                <i class="mdi mdi-power"></i>
+              </a>
+            </li>
+            <li class="nav-item nav-settings d-none d-lg-block">
+              <a class="nav-link" href="#">
+                <i class="mdi mdi-format-line-spacing"></i>
+              </a>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul id="ui-navaber" class="nav">
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                  <img id="userImg2" src="../../assets/images/jpg/user-icon.jpg" alt="profile" />
+                  <span id="onlineStatus2" class=" login-status online"></span>
+                  <!--change to offline or busy as needed-->
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                  <span id="userFullName2" class=" font-weight-bold mb-2">Ism Familya</span>
+                  <span id="userRole" class="text-secondary text-small">Role</span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">
+                <span class="menu-title">Boshqaruv Paneli</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+           <li class="nav-item">
+              <a class="nav-link" href="../students/students-class.html">
+                <span class="menu-title">O'quvchilar</span>
+                <i class="fa fa-users menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../news/news.html">
+                <span class="menu-title">Yangiliklar</span>
+                <i class="fa fa-bullhorn menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="library.html">
+                <span class="menu-title">Kutubxona</span>
+                <i class="fa fa-book menu-icon"></i>
+              </a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="../messages.html">
+                <span class="menu-title">Xabarlar</span>
+                <i class="mdi mdi-message menu-icon"></i>
+              </a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="../notif.html">
+                <span class="menu-title">Bildirishnomalar</span>
+                <i class="fa fa-bell menu-icon"></i>
+              </a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="../settings.html">
+                <span class="menu-title">Sozlamlar</span>
+                <i class="fa fa-gear menu-icon"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- partial -->
+        <div class="main-panel">
+          <div id="wrapCont" class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white me-2">
+                  <i class="fa fa-address-card"></i>
+                </span> Kutubxona
+              </h3>
+              <nav aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <button data-bs-toggle="modal" data-bs-target="#addBookModal" class="btn-inverse-primary for inverse buttons btn-rounded">
+                      Kitob Qo'shish
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+  <div class="container py-4">
+    <!-- Filter -->
+    <div class="d-flex align-items-center mb-3">
+      <label class="me-2">Sinf bo'yicha filter:</label>
+      <select id="filterClass" class="form-select w-auto">
+        <option value="">Barcha kitoblar</option>
+      </select>
+    </div>
+
+    <!-- Kitoblar ro‘yxati -->
+    <div id="bookList" class="row g-3"></div>
+  </div>
+
+  <!-- Modal: Kitob qo‘shish -->
+  <div class="modal fade" id="addBookModal" style="z-index: 1051;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Yangi kitob qo'shish</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="bookForm">
+          <div class="modal-body row g-3">
+            <div class="col-md-6">
+              <input type="text" id="title" class="form-control" placeholder="Kitob nomi" required>
+            </div>
+            <div class="col-md-6">
+              <input type="text" id="author" class="form-control" placeholder="Muallif (ixtiyoriy)">
+            </div>
+            <div class="col-12">
+              <textarea id="description" class="form-control" placeholder="Tavsif"></textarea>
+            </div>
+            <div class="col-md-6">
+              <select id="class_id" class="form-select">
+                <option value="">Sinfga bog;lanmagan</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <input type="file" id="fileInput" class="form-control" accept=".pdf,.epub,.docx,.txt" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary">Qo'shish</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+          </div>
+              
+
+
+                  </div>
+                </div>
+
+          <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2026 <a href="../../../index.html" target="_blank">124-Maktab</a>. All rights reserved.</span>
+          </footer>
+          <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- Loader -->
+  <div id="loader" class="loader hidden">
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+<!-- /Loader -->
+<!-- ShowAlert -->
+<div class="toast-container position-fixed top-0 end-0 p-3">
+            <div
+              id="liveToast"
+              class="toast"
+              role="alert"
+              aria-live="assertive"
+              aria-atomic="true"
+            ></div>
+          </div>
+
+<!-- Show Alert -->
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../../assets/vendors/chart.js/chart.umd.js"></script>
+    <script src="../../assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../assets/js/off-canvas.js"></script>
+    <script src="../../assets/js/misc.js"></script>
+    <script src="../../assets/js/settings.js"></script>
+    <script src="../../assets/js/todolist.js"></script>
+    <script src="../../assets/js/jquery.cookie.js"></script>
+    <!-- endinject -->
+    <!-- Supa Base SDK -->
+     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <!-- End Supa Base SDK -->
+    <!-- Custom js for this page -->
+    <script type="text/javascript" src="../../assets/js/request.js"></script>
+    <script type="text/javascript" src="../../assets/js/auth.js"></script>
+    <script type="text/javascript">
+//Real-Time
+function startPresence() {
+     channel = sb.channel('online-users', {
+        config: { presence: { key: CURRENT_USER.id } }
+      })
+
+      channel.on('presence', { event: 'sync' }, () => {
+        presenceState = channel.presenceState()
+        getInfo()
+        loadBooks()
+       getUnreadPreview(CURRENT_USER.id).then((p)=>{
+           showMessage(p);
+           });
+      })
+      channel.subscribe(status => {
+        if (status === 'SUBSCRIBED') {
+          channel.track({
+            user_id: CURRENT_USER.id,
+            email: CURRENT_USER.email,
+            last_seen: new Date().toISOString()
+          })
+        }
+      })
+    }
+
+
+
+// Brauzer yopilganda untrack
+    window.addEventListener('beforeunload', () => {
+      if (channel) {
+        channel.untrack()
+        channel.unsubscribe()
+      }
+    })
+
+
+
+// Show Alert
+function showAlert(text,type){
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance($('liveToast'))
+  if (type == 'err') {
+    $('liveToast').innerHTML = `
+    <div class="toast-header">
+      <img src="" class="rounded me-2" alt="">
+      <strong class="me-auto">❌Xatolik</strong>
+      <small>hozir</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+     ${text}
+    </div>
+    `
+  }else{
+    $('liveToast').innerHTML = `
+    <div class="toast-header">
+      <img src="" class="rounded me-2" alt="">
+      <strong class="me-auto">✅Muvaffaqiyatli</strong>
+      <small>hozir</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+     ${text}
+    </div>
+    `
+  }
+toastBootstrap.show()
+ 
+
+}
+
+
+
+// Get New Messages For Users
+ async function getUnreadPreview(id) {
+  const { data, error } = await sb
+    .from("messages")
+    .select(`
+      id,
+      content,
+      created_at,
+      sender:sender_id ( id, first_name, last_name, role, avatar_url )
+    `)
+    .eq("receiver_id",id)  // faqat menga kelgan
+    .eq("is_read", false)              // o‘qilmaganlar
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    console.error("Xato:", error);
+    return [];
+  }
+
+  // 🔄 Faqat oxirgi 3 ta yuboruvchini olish
+  const seenSenders = new Set();
+  const result = [];
+
+  for (let msg of data) {
+    if (!seenSenders.has(msg.sender.id)) {
+      seenSenders.add(msg.sender.id);
+      result.push({
+        sender_id: msg.sender.id,
+        full_name: msg.sender.first_name + " " + msg.sender.last_name,
+        role: msg.sender.role,
+        avatar: msg.sender.avatar_url,
+        last_message: msg.content,
+        time: msg.created_at,
+      });
+    }
+    if (result.length === 3) break;
+  }
+
+  return result;
+}
+
+// Show New Messages
+async function showMessage(data){
+   const messagesBox = $('messagesBox');
+   messagesBox.innerHTML = ''
+   $('messagesCount').textContent = `${data.length} Yangi Xabar`;
+   if (!data.length) {
+    $('messagesAlert').classList.remove('bg-warning')
+    messagesBox.innerHTML = `
+    <a class="dropdown-item preview-item">
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <p class="text-gray mb-0"> Hozircha hech Qanday yangi Xabar Yo'q </p>
+                  </div>
+     </a>
+    `;
+  }else{
+     data.forEach((item)=>{
+      $('messagesAlert').classList.add('bg-warning')
+      messagesBox.innerHTML +=`
+    <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img src=${item.avatar || '../../assets/images/jpg/user-icon.jpg'} alt="image" class="profile-pic">
+                  </div>
+                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">${item.full_name}</h6>
+                    <p class="text-gray mb-0"> ${item.last_message} </p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+    `;
+  });
+  };
+};
+
+
+
+      
+// Fayllar Supabase Storage ichida saqlanadi
+const bucketName = "books"; // ❗ avval storage bucket oching
+
+// 📌 Sinflarni yuklash
+async function loadClasses() {
+  let { data, error } = await sb.from("classes").select("*").order("created_at");
+  if (error) { console.error(error); return; }
+
+  const selectAdd = document.getElementById("class_id");
+  const selectFilter = document.getElementById("filterClass");
+
+  data.forEach(c => {
+    const opt1 = new Option(c.name, c.id);
+    const opt2 = new Option(c.name, c.id);
+    selectAdd.add(opt1);
+    selectFilter.add(opt2);
+  });
+}
+
+// 📌 Kitoblarni yuklash
+async function loadBooks(filterId = null) {
+  let query = sb.from("books").select("*").order("created_at", { ascending: false });
+  if (filterId) query = query.eq("class_id", filterId);
+
+  let { data, error } = await query;
+  if (error) { console.error(error); return; }
+
+  const container = document.getElementById("bookList");
+  container.innerHTML = "";
+
+  if (data.length === 0) {
+    container.innerHTML = `<p class="text-muted">Kitoblar topilmadi</p>`;
+    return;
+  }
+
+  data.forEach(b => {
+    container.innerHTML += `
+      <div class="col-md-4">
+        <div class="card book-card h-100 text-center p-3">
+          <div class="file-icon"></div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">${b.title}</h5>
+            <p class="text-muted">${b.author || ""}</p>
+            <p class="card-text flex-grow-1">${b.description || ""}</p>
+            <a class="btn btn-sm btn-success mb-2" href="${b.file_url || '#'}" target="_blank">Yuklab olish</a>
+            <button class="btn btn-sm btn-danger" onclick="deleteBook('${b.id}')">O'chirish</button>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+}
+
+// 📌 Kitob qo‘shish
+document.getElementById("bookForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const title = document.getElementById("title").value;
+  const author = document.getElementById("author").value;
+  const description = document.getElementById("description").value;
+  const class_id = document.getElementById("class_id").value || null;
+
+  let file_url = null;
+  const fileInput = document.getElementById("fileInput");
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+    const { data, error } = await sb.storage.from(bucketName).upload(`${Date.now()}_${file.name}`, file);
+    if (error) return alert("Fayl yuklashda xatolik: " + error.message);
+    const { data: publicUrl } = sb.storage.from(bucketName).getPublicUrl(data.path);
+    file_url = publicUrl.publicUrl;
+  }
+
+  const { error } = await sb.from("books").insert([
+    { title, author, description, class_id, file_url }
+  ]);
+
+  if (error) return alert(error.message);
+
+  e.target.reset();
+  bootstrap.Modal.getInstance(document.getElementById("addBookModal")).hide();
+  loadBooks();
+});
+
+// 📌 Kitobni o‘chirish
+async function deleteBook(id) {
+  if (!confirm("Haqiqatan ham o'chirmoqchimisiz?")) return;
+  const { error } = await sb.from("books").delete().eq("id", id);
+  if (error) return alert(error.message);
+  loadBooks();
+}
+
+// 📌 Filter bo‘yicha saralash
+document.getElementById("filterClass").addEventListener("change", (e) => {
+  const val = e.target.value;
+  if (val) loadBooks(val); else loadBooks();
+});
+
+// Boshlash
+loadClasses();
+loadBooks();
+    </script>
+    <!-- End custom js for this page -->
+  </body>
+</html>

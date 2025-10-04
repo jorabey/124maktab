@@ -1,0 +1,77 @@
+:root{
+    --bg:#eef2f7; --panel:#ffffff; --accent:#0088cc; --muted:#6b7280;
+  }
+  *{box-sizing:border-box}
+  body,html{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+  .app {
+    height:100vh; display:flex; background:var(--bg); overflow:hidden;
+  }
+
+  /* LEFT: users */
+  .left {
+    width:360px; min-width:260px; background:var(--panel); border-right:1px solid #e6e9ef; display:flex; flex-direction:column;
+  }
+  .left .header{
+    padding:14px 16px; display:flex; gap:10px; align-items:center; border-bottom:1px solid #f1f5f9;
+  }
+  .left .header .me {display:flex; gap:10px; align-items:center;}
+  .left .search { padding:10px 16px; border-bottom:1px solid #f1f5f9; }
+  .left .users { overflow:auto; flex:1; padding:6px 0; }
+
+  .user-item {
+    display:flex; gap:12px; padding:10px 14px; align-items:center; cursor:pointer; transition:background .12s, transform .12s;
+  }
+  .user-item:hover{background:#fbfdff; transform:translateY(-1px);}
+  .avatar { width:48px;height:48px;border-radius:50%; object-fit:cover; }
+  .u-meta { flex:1; min-width:0; }
+  .u-name { font-weight:600; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .u-last { font-size:13px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .u-right { text-align:right; width:80px; flex-shrink:0; }
+
+  .badge-unread { background:#e02424; color:#fff; padding:3px 7px; border-radius:999px; font-size:12px; font-weight:700; }
+
+  /* RIGHT: chat */
+  .right { flex:1; display:flex; flex-direction:column; min-width:0; }
+  .chat-header {
+    display:flex; align-items:center; gap:12px; padding:12px 16px; border-bottom:1px solid #e6e9ef; background:linear-gradient(90deg,var(--accent),#3bc2f0); color:#fff;
+  }
+  .chat-header .name { font-weight:700; font-size:16px; }
+  .chat-area { flex:1; display:flex; flex-direction:column; min-height:0; background:
+    linear-gradient(180deg,#eaf6fb,#f7fbff); padding:16px; overflow:hidden;
+  }
+  .messages { overflow:auto; padding-bottom:12px; }
+  .msg-row { display:flex; margin:8px 0; align-items:flex-end; gap:8px; }
+  .msg-row.self { justify-content:flex-end; }
+  .bubble {
+    padding:10px 14px; border-radius:14px; max-width:70%; box-shadow:0 6px 18px rgba(16,24,40,0.06);
+    font-size:14px; line-height:1.3;
+    word-wrap:break-word;
+    transform-origin: right bottom;
+  }
+  .bubble.self { background:var(--accent); color:#fff; border-bottom-right-radius:4px; animation:popIn .18s ease-out; }
+  .bubble.other { background:#fff; color:#111827; border:1px solid #e6e9ef; border-bottom-left-radius:4px; animation:fadeInUp .18s ease-out; }
+  @keyframes popIn{from{transform:translateY(6px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+  @keyframes fadeInUp{from{transform:translateY(6px);opacity:0}to{transform:none;opacity:1}}
+
+  .msg-meta { font-size:11px; color:var(--muted); margin-top:6px; display:flex; gap:8px; align-items:center; }
+  .tick { color: #b7e1ff; font-size:12px; }
+
+  .input-bar { padding:10px 14px; border-top:1px solid #e6e9ef; background:var(--panel); display:flex; gap:8px; align-items:center; position:sticky; bottom:0; z-index:5; }
+  .input-bar input { flex:1; padding:10px 12px; border-radius:999px; border:1px solid #e6e9ef; outline:none; font-size:15px; }
+  .icon-btn { width:44px; height:44px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; border:none; background:linear-gradient(180deg,#fff,#f1f5f9); box-shadow:0 6px 16px rgba(2,6,23,0.06); cursor:pointer; }
+
+  /* search tiny */
+  .search input { width:100%; padding:10px 12px; border-radius:999px; border:1px solid #eef2f7; }
+
+  /* mobile */
+  @media (max-width:900px){
+    .left { width:100%; position:relative; z-index:2 }
+    .right { display:none }
+    .right.active { display:flex; position:fixed; inset:0; z-index:10; background:var(--panel) }
+    .left.hidden { display:none }
+    .input-bar { position:fixed; bottom:0; left:0; right:0; }
+    .messages { padding-bottom:76px } /* input space */
+  }
+
+  /* small helpers */
+  .muted{color:var(--muted)} .time{font-size:12px;color:var(--muted)}

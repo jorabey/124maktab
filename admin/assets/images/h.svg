@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     viewBox="0 0 600 500" 
+     width="100%" height="auto" 
+     preserveAspectRatio="xMidYMid meet">
+
+  <!-- Qush -->
+  <path d="M370 60 C400 30 460 10 510 30 C480 70 430 90 410 110 C450 100 510 110 560 150 C520 160 480 140 440 150 C390 160 350 190 300 180 C270 175 250 150 210 140 C240 120 280 95 320 70 Z"
+        fill="#F2A900"/>
+
+  <!-- Kitob -->
+  <path d="M150 300 C100 260 80 200 120 150 C170 90 280 60 400 60 
+           C340 110 300 170 280 220 C240 260 200 290 150 300 Z"
+        fill="#0B3D91"/>
+
+  <path d="M550 300 C600 260 620 200 580 150 C530 90 420 60 300 60 
+           C360 110 400 170 420 220 C460 260 500 290 550 300 Z"
+        fill="#0B3D91"/>
+
+  <!-- 124-MAKTAB -->
+  <text x="300" y="420" 
+        text-anchor="middle" 
+        font-size="80" 
+        font-family="Georgia, serif" 
+        font-weight="bold"
+        fill="#0B3D91">
+    124-MAKTAB
+  </text>
+
+</svg>

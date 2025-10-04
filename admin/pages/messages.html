@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="uz">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Xabarlar | Boshqaruv Paneli | 124-Maktab</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../assets/vendors/font-awesome/css/font-awesome.min.css">
+    <!-- Bootstrap, FontAwesome, Animate.css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../assets/vendors/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/chat.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../assets/images/logo.png" />
+  </head>
+<body>
+
+<div class="app" id="app">
+  <!-- LEFT -->
+  <aside class="left" id="leftPanel">
+    <div class="header">
+              <a class="nav-link" href="../index.html">
+                <span class="menu-title">Boshqaruv Paneli</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+      <div class="me">
+        <img id="myAvatar" src="../assets/images/jpg/user-icon.jpg" class="avatar">
+        <div>
+          <div id="myName" style="font-weight:700">Siz</div>
+          <div class="muted" id="myRole">role</div>
+        </div>
+      </div>
+      <div style="margin-left:auto">
+        <button class="icon-btn" id="refreshBtn" title="Yangilash"><i class="fa fa-sync"></i></button>
+      </div>
+    </div>
+
+    <div class="search">
+      <input id="searchInput" placeholder="Foydalanuvchilarni qidirish (ism/fam)..." />
+    </div>
+
+    <div class="users" id="usersList">
+      <!-- user items -->
+    </div>
+  </aside>
+
+  <!-- RIGHT -->
+  <main class="right" id="rightPanel" aria-live="polite">
+    <div class="chat-header">
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="icon-btn d-md-none" id="backBtn" title="Orqaga"><i class="fa fa-arrow-left"></i></button>
+        <img id="chatAvatar" src="../assets/images/jpg/user-icon.jpg" style="width:40px;height:40px;border-radius:50%">
+        <div>
+          <div class="name" id="chatName">Chat</div>
+          <div class="muted" id="chatStatus">offline</div>
+        </div>
+      </div>
+      <div style="margin-left:auto" class="muted small" id="chatExtra"> </div>
+    </div>
+
+    <div class="chat-area">
+      <div class="messages" id="messagesContainer">
+        <!-- messages -->
+      </div>
+    </div>
+
+    <div class="input-bar">
+      <input id="msgInput" type="text" placeholder="Xabar yozing..." autocomplete="off">
+      <button class="icon-btn" id="sendBtn" title="Yuborish"><i class="fa fa-paper-plane"></i></button>
+    </div>
+  </main>
+</div>
+<div id="loader" class="loader hidden">
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+<!-- ShowAlert -->
+<div class="toast-container position-fixed top-0 end-0 p-3">
+            <div
+              id="liveToast"
+              class="toast"
+              role="alert"
+              aria-live="assertive"
+              aria-atomic="true"
+            ></div>
+          </div>
+
+<!-- Show Alert -->
+ <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../assets/vendors/chart.js/chart.umd.js"></script>
+    <script src="../assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../assets/js/off-canvas.js"></script>
+    <script src="../assets/js/misc.js"></script>
+    <script src="../assets/js/settings.js"></script>
+    <script src="../assets/js/todolist.js"></script>
+    <script src="../assets/js/jquery.cookie.js"></script>
+    <!-- endinject -->
+    <!-- Supa Base SDK -->
+     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <!-- End Supa Base SDK -->
+<script type="text/javascript" src="../assets/js/request.js"></script>
+<script type="text/javascript" src="../assets/js/auth4.js"></script>
+<script type="text/javascript" src="../assets/js/messages.js"></script>
+</body>
+</html>
