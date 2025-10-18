@@ -19,7 +19,7 @@
   } else if (prof.role === "manager") {
     window.location.href = "manager/index.html";
   } else if (prof.role === "teacher") {
-    window.location.href = "teachers/index.html";
+    window.location.href = "teach/index.html";
   } else if (prof.role == "library") {
     window.location.href = "library/index.html";
   } else if (prof.role == "admin") {
