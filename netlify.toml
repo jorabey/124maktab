@@ -1,0 +1,8 @@
+[build]
+  publish = "124maktab" # yoki "public" yoki "build" — loyihangda qayerda index.html joylashgan bo‘lsa
+  command = ""     # agar build komandasi bo‘lmasa, bo‘sh qoldir
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
