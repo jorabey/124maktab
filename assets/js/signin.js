@@ -74,7 +74,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
   } else if (profile.role === "manager") {
     window.location.href = "manager/index.html";
   } else if (profile.role === "teacher") {
-    window.location.href = "teacher/index.html";
+    window.location.href = "teach/index.html";
   } else if (profile.role == "library") {
     window.location.href = "library/index.html";
   } else if (profile.role == "admin") {
